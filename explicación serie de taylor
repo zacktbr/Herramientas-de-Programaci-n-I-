@@ -1,0 +1,20 @@
+# Herramientas-de-Programaci-n-I-
+portafolio de aprendizaje de c#
+explicación concisa del algoritmo y como puedo utilizarlo 
+El algoritmo utilizado es la serie de Taylor para aproximar el valor de la función coseno de un ángulo dado. La serie de Taylor es una fórmula matemática que permite aproximar una función mediante una suma de términos que involucran las derivadas de la función evaluadas en un punto específico.
+En este caso, la serie de Taylor para el coseno se utiliza para aproximar el valor de cos(z) mediante la suma de los términos correspondientes de la serie. El usuario debe ingresar la cantidad de términos que desea utilizar para la aproximación y el ángulo en radianes que desea aproximar.
+Para utilizar el algoritmo, simplemente es necesario compilar el código en un entorno de desarrollo de C# y ejecutar el programa. El programa solicitará al usuario que ingrese la cantidad de términos de la serie y el ángulo en radianes. Luego, calculará la aproximación utilizando la serie de Taylor y mostrará el resultado en la consola.
+Este algoritmo puede ser útil para realizar aproximaciones de la función coseno en situaciones en las que no se dispone de una función predefinida para su cálculo, o cuando se desea una aproximación más precisa que la que proporciona una función predefinida.
+  
+ la creación del ciclo for en el algoritmo 
+En el algoritmo, se utiliza un ciclo for para realizar el cálculo de los términos de la serie de Taylor. El ciclo se inicia en i=0 y se ejecuta hasta i<n, donde n es la cantidad de términos de la serie que se desea utilizar para la aproximación.
+En cada iteración del ciclo, se calcula el término correspondiente de la serie y se agrega a la variable resultado, que almacena el valor de la aproximación. El valor de resultado se actualiza en cada iteración del ciclo, sumando el valor del término actual.
+Además, en cada iteración se actualizan los valores de las variables signo, potencia y factorial, que se utilizan para calcular el siguiente término de la serie. La variable signo cambia de signo en cada término (comenzando con un signo positivo), potencia se actualiza multiplicando su valor por z*z, y factorial se actualiza multiplicando su valor por (2*i+1)*(2*i+2). Estos cálculos se realizan para poder obtener el término siguiente de la serie, utilizando los valores de z, potencia y factorial actualizados en la iteración anterior.
+Una vez que el ciclo for termina, el valor final de resultado se muestra en la consola como resultado de la aproximación.
+  
+signo la potencia y el factorial en el algoritmo
+El signo, la potencia y el factorial que se utilizan en el algoritmo de la serie de Taylor para el coseno son elementos clave para el cálculo de los términos de la serie.
+•	El signo: En la serie de Taylor para el coseno, el signo de cada término es alternante, lo que significa que cambia de signo en cada término. Por lo tanto, se utiliza una variable signo para almacenar el signo del término actual, comenzando con un signo positivo y cambiando a negativo en cada término.
+•	La potencia: En cada término de la serie, se eleva el ángulo z a una potencia par. Por lo tanto, se utiliza una variable potencia para almacenar el valor de z elevado a la potencia par correspondiente al término actual. En cada iteración del ciclo, se actualiza potencia multiplicando su valor por z*z, de manera que se eleva z a una potencia par adicional.
+•	El factorial: En cada término de la serie, se divide el valor z elevado a una potencia par por el factorial de un número impar. Por lo tanto, se utiliza una variable factorial para almacenar el valor del factorial correspondiente al término actual. En cada iteración del ciclo, se actualiza factorial multiplicando su valor por (2*i+1)*(2*i+2), de manera que se calcula el factorial para el término siguiente.
+Estos valores se utilizan en la fórmula de la serie de Taylor para el coseno, que involucra sumar los términos de la serie, multiplicados por los valores correspondientes de signo, potencia y factorial. De esta manera, se obtiene una aproximación del valor del coseno para el ángulo z dado.
