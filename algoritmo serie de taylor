@@ -1,0 +1,25 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.WriteLine("Ingrese la cantidad de términos de la serie:");
+        int n = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Ingrese el ángulo en radianes:");
+        double z = double.Parse(Console.ReadLine());
+        
+        double resultado = 0;
+        double signo = 1;
+        double potencia = 1;
+        double factorial = 1;
+        
+        for (int i = 0; i < n; i++) {
+            resultado += signo * potencia / factorial;
+            signo *= -1;
+            potencia *= z * z;
+            factorial *= (2 * i + 1) * (2 * i + 2);
+        }
+        
+        Console.WriteLine("El resultado de la aproximación es: " + resultado);
+    }
+}
